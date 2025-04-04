@@ -11,13 +11,15 @@
 <body>
     <div id="my_blog_1">
         <h1>Мой блог</h1>
-        <button onclick="window.location.href='{{ url_for('get_create_post_template') }}'" id="knopka_1">Создать пост</button>
+        <button onclick="window.location.href='{{ url_for('get_create_post_template') }}'" class="knopka">Создать пост</button>
     </div>
     {% for post_name in posts.keys() %}
         <div class="my_blog">
             <h1>{{post_name}}</h1>
             <p>{{posts[post_name]['text']}}</p>
             <img src="{{posts[post_name]['image']}}" alt="">
+
+            <button onclick="window.location.href='{{ url_for('get_redaktirovanie_template', title=post_name) }}'" class="knopka">Редактировать пост</button>
         </div>
     {% endfor %}
 </body>

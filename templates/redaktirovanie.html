@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/redaktirovanie.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Редактирование поста</h2>
+    <form class='vse_redaktirovania' action="/redaktirovanie_post" method="post" enctype="multipart/form-data">
+        <div class="redaktirovanie">
+            <label>Название:</label>
+            <input type="text" name='title' value="{{title}}" required>
+        </div>
+        <div class="redaktirovanie">
+            <label>Текст поста:</label>
+            <textarea name="text" required>{{post['text']}}</textarea>
+        </div>
+        <span>Уже выбранная картинка: {{post['image']}}</span>
+        <div class="redaktirovanie">
+            <label>Новая картинка:</label>
+            <input  name='kartinka' type="file">
+        </div>
+        <button type="submit" class="send-button">Отредактировать</button>
+    </form>
+</body>
+</html>

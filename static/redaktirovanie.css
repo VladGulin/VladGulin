@@ -1,0 +1,26 @@
+.redaktirovanie{
+    display: flex;
+}
+
+.vse_redaktirovania{
+    display: flex;
+    background-color: aliceblue;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.redaktirovanie label{
+    width: 150px;
+    text-align: end;
+}
+
+.send-button{
+    background-color: rgb(74, 127, 240);
+    color: white;
+}
+
+.send-button:hover{
+    font-size: 30px;
+    transition-duration: 2s; 
+}
